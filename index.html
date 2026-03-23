@@ -2724,15 +2724,15 @@ function saveLog(){
 }
 
 // ── GITHUB BACKUP SYSTEM ──────────────────────────────────────────
-const GH = {
+var GH = {
   token:    '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',   // ghp_...
   username: 'christiandubon01', // e.g. christiandubon01
   repo:     'poweron-backups',
   branch:   'main'
 };
 
-let lastBackupTime = null;
-let backupTimer    = null;
+var lastBackupTime = null;
+var backupTimer    = null;
 
 async function githubBackup(triggeredBy = 'manual') {
   try {
